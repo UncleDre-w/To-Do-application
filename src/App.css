@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    font-family: serif;
+    color: white;
+    width: 100%;
+}
+
+button, .round-checkbox, .remove-icon, .filters p, .desktop-filters {
+    cursor: pointer;
+}
+
+.filters p:hover, .desktop-filters:hover, .clear:hover {
+    color: hsl(235, 19%, 35%);
+}
+
+.round-checkbox:hover {
+    border-color: white;
+}
+
+.bg-image {
+    width: 100%;
+    height: 37vh;
+}
+
+.bottom-bg {
+    position: relative;
+    background-color: hsl(235, 21%, 11%);
+    width: 100%;
+    top: -0.2rem;
+    min-height: 200vh;
+    padding-bottom: 10rem;
+}
+
+.absolute {
+    width: 100%;
+    padding: 20px;
+}
+
+.top nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.top div.margin {
+    margin-bottom: 30px;
+}
+
+h1 {
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.top {
+    margin-top: -160px;
+}
+
+.theme-icon {
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.container {
+    background-color: hsl(235, 24%, 19%);
+    width: 100%;
+    border-bottom: 1px solid hsl(0, 1%, 82%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.white-background {
+    background-color: #fff;
+}
+
+.container.input {
+    height: 3rem;
+    border-radius: 0.2rem;
+}
+
+.textbox {
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+input {
+    font-size: 0.8rem;
+    width: 70%;
+    background-color: transparent;
+    height: 2.5rem;
+    border: none;
+    color: white;
+}
+
+input::placeholder {
+    font-size: 0.6rem;
+    color: hsl(234, 39%, 85%);
+}
+
+input:focus {
+    outline: none;
+}
+
+.round-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid hsl(234, 11%, 52%);
+    border-radius: 100%;
+    left: 1rem;
+    top: 0.8rem;
+}
+
+.is-checked {
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.add {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.checkmark {
+    height: 0.5rem;
+}
+
+.remove-icon {
+    align-self: end;
+    justify-self: end;
+    height: 0.7rem;
+}
+
+.drag-icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: -0.6rem;
+    right: -1.2rem;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    transition: all 0.15s;
+}
+
+.drag-icon:hover {
+    cursor: grab;
+    background-color: hsla(232, 21%, 22%, 0.5);
+    /* background-color: hsl(233, 20%, 42%); */
+}
+
+.lists {
+    margin-top: 10px;
+    box-shadow: 1rem 1rem 3rem black;
+    background-color: hsl(235, 24%, 19%);
+}
+
+.list-item {
+    display: grid;
+    position: relative;
+    grid-template-columns: 0fr 1fr 0.1fr;
+    cursor: pointer;
+}
+
+.list-item:first-child {
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+}
+
+.list-item div:nth-child(2) {
+    margin-right: 10px;
+}
+
+.list-item:last-child {
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+
+.list-item p {
+    margin-left: 1rem;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+    /* color: hsl(234, 39%, 85%); */
+}
+
+.dark-checked, .light-checked {
+    text-decoration: line-through;
+}
+
+.dark-checked {
+    color: hsl(234, 11%, 52%);
+}
+
+.light-checked {
+    color: hsl(233, 11%, 84%);
+}
+
+.dark-unchecked {
+    color: hsl(234, 39%, 85%);
+}
+
+.light-unchecked {
+    color: hsl(235, 19%, 35%);
+}
+
+.container.bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.clear, .items-count {
+    border: none;
+    background-color: transparent;
+    color: hsl(234, 11%, 52%);
+    font-size: 0.8rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: 1rem 1rem 3rem black;
+    box-shadow: 1rem 1rem 3rem black;
+}
+
+.desktop-filters {
+    color: hsl(234, 11%, 52%);
+    opacity: 0;
+}
+
+.reorder {
+    text-align: center;
+    margin-top: 3rem;
+    color: hsl(234, 11%, 52%);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+@media (min-height: 600px) and (max-width: 1272px)  {
+    .App {
+        background-color: red;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .theme-icon {
+        height: 2em;
+    }
+
+    input {
+        width: 90%;
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    input::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .top, .lists, .filters {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+
+    .lists {
+        margin-top: 1.5rem;
+    }
+
+    .filters {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .absolute {
+        margin-top: -200px;
+        position: absolute;
+    }
+
+    .list-item p, .clear, .items-count, .filters {
+        font-size: 1rem;
+    }
+
+    .list-item div {
+        white-space: wrap;
+    }
+
+    .bottom-bg {
+        min-height: 100rem;
+    }
+
+    .reorder {
+        font-size: 1rem;
+    }
+
+    .desktop-filters {
+        display: initial;
+        opacity: 1;
+    }
+    
+    .filters {
+        display: none;
+    }
+
+    .textbox {
+        margin-bottom: 0;
+    }
+
+}
+
+@media (min-height: 500px) and (max-width: 800px) {
+    .desktop-filters {
+        display: none;
+    }
+
+    .drag-icon {
+        display: none;
+    }
+
+    .App {
+        background-color: red;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .theme-icon {
+        height: 2em;
+    }
+
+    input {
+        width: 90%;
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    input::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .list-item {
+        grid-template-columns: 0fr 1fr 0fr;
+    }
+
+    .list-item p, .clear, .items-count, .filters {
+        font-size: 1rem;
+    }
+
+    .bottom-bg {
+        min-height: 100rem;
+    }
+}
